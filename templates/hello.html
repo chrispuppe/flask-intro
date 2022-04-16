@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+    <title>Hi There!</title>
+    </head>
+    <body>
+    <h1>Would you like a comliment?</h1>
+
+    <form action="/greet">
+        What's your name? <input type="text" name="person">
+        <select name="compliment">
+            {% for compliment in AWESOMENESS %}
+            <option value= "{{compliment}}" SELECTED>{{compliment}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1>Or would you like an instult?</h1>
+    <form action="/diss">
+        What's your name? <input type="text" name="person">
+        <select name="insult">
+            {% for insult in WEAKNESS %}
+            <option value= "{{insult}}" SELECTED>{{insult}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+    </body>
+</html>
